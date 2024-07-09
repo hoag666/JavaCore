@@ -286,7 +286,7 @@ public class QuanLyCuTa {
 
         for (int i = 0; i < hoTen.length - 1; i++) {
             for (int j = i + 1; j < hoTen.length; j++) {
-                if (hoTen[i].compareTo(hoTen[j]) > 0) {
+                if (hoTen[i].length() > hoTen[j].length()) {
 
                     String tmp = hoTen[i];
                     hoTen[i] = hoTen[j];

@@ -7,7 +7,8 @@ public class QuanLyCuTa {
     static Scanner sc = new Scanner(System.in);
 
     static String[] hoTen = new String[]{
-            "Nguyen Ba Viet Hoang", "Vu Duc Dung", "Nguyen Quoc Cuong", "Dao Duy Anh", "Nguyen Duy Hung", "Do Quang Hao", "Tran Van Truong"
+            "Nguyen Ba Viet Hoang", "Vu Duc Dung", "Nguyen Quoc Cuong", "Dao Duy Anh",
+            "Nguyen Duy Hung", "Do Quang Hao", "Tran Van Truong"
     };
 
     static int[] lan1 = new int[]{
@@ -65,7 +66,7 @@ public class QuanLyCuTa {
                     sortByName();
                     break;
                 case 5:
-                    showFillName("T");
+                    showFillName();
                     break;
                 case 6:
                     showFillName2("an");
@@ -248,13 +249,14 @@ public class QuanLyCuTa {
         sc.nextLine();
     }
 
-    private static void showFillName(String name) {
+    private static void showFillName() {
 
         System.out.println("====================================== DANH SÁCH ==========================================================");
         System.out.println("----------------------------- TÊN VẬN ĐỘNG VIÊN CÓ VẦN \"T\"-----------------------------------------------");
         System.out.println(String.format("%-5s | %-30s | %10s | %15s | %15s | %15s |", "STT", "HỌ TÊN VẬN ĐỘNG VIÊN", "Lần 1", "Lần 2", "Lần 3", "Tổng Thành Tích"));
         for (int i = 0; i < hoTen.length; i++) {
-            if (hoTen[i].toLowerCase().contains(name.toLowerCase())) {
+            int index = hoTen[i].lastIndexOf(" ");
+            if (hoTen[i].charAt(index + 1) == 'T' || hoTen[i].charAt(index + 1) == 't') {
                 System.out.println("-----------------------------------------------------------------------------------------------------------");
                 System.out.println(String.format("%-5s | %-30s | %10d | %15s | %15s | %15s |", i + 1, hoTen[i], lan1[i], lan2[i], lan3[i], sum[i]));
             }
@@ -317,16 +319,37 @@ public class QuanLyCuTa {
     }
 
     private static void equal() {
-        int equal1 = sum[1];
+        for (int i = 0; i < hoTen.length - 1; i++) {
+            for (int j = i + 1; j < hoTen.length; j++) {
+                if (sum[i] < sum[j]) {
+                    String tmp = hoTen[i];
+                    hoTen[i] = hoTen[j];
+                    hoTen[j] = tmp;
+
+                    int tmp1 = lan1[i];
+                    lan1[i] = lan1[j];
+                    lan1[j] = tmp1;
+
+                    int tmp2 = lan2[i];
+                    lan2[i] = lan2[j];
+                    lan2[j] = tmp2;
+
+                    int tmp3 = lan3[i];
+                    lan3[i] = lan3[j];
+                    lan3[j] = tmp3;
+
+                    int tmp4 = sum[i];
+                    sum[i] = sum[j];
+                    sum[j] = tmp4;
+                }
+            }
+        }
         System.out.println("====================================== DANH SÁCH ==========================================================");
-        System.out.println("-------------------------------- TỔNG THÀNH TÍCH BẰNG NHAU ------------------------------------------------");
+        System.out.println("---------------------------- VẬN ĐỘNG VIÊN CÓ CÙNG TỔNG THÀNH TÍCH ----------------------------------------");
         System.out.println(String.format("%-5s | %-30s | %10s | %15s | %15s | %15s |", "STT", "HỌ TÊN VẬN ĐỘNG VIÊN", "Lần 1", "Lần 2", "Lần 3", "Tổng Thành Tích"));
         for (int i = 0; i < hoTen.length; i++) {
-            if (sum[i] == equal1) {
-                equal1 = sum[i];
-                System.out.println("-----------------------------------------------------------------------------------------------------------");
-                System.out.println(String.format("%-5s | %-30s | %10d | %15s | %15s | %15s |", i + 1, hoTen[i], lan1[i], lan2[i], lan3[i], sum[i]));
-            }
+            System.out.println("-----------------------------------------------------------------------------------------------------------");
+            System.out.println(String.format("%-5s | %-30s | %10d | %15s | %15s | %15s |", i + 1, hoTen[i], lan1[i], lan2[i], lan3[i], sum[i]));
         }
         System.out.println("-----------------------------------------------------------------------------------------------------------");
         System.out.print("Nhấn ENTER để tiếp tục ...");

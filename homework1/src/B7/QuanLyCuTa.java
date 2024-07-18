@@ -12,20 +12,24 @@ public class QuanLyCuTa {
     };
 
     static int[] lan1 = new int[]{
-            150, 160, 200, 140, 130, 150, 190
+            150, 160, 200, 140, 130, 190, 190
     };
 
     static int[] lan2 = new int[]{
-            160, 140, 130, 190, 200, 180, 170
+            160, 140, 130, 190, 200, 170, 170
     };
 
     static int[] lan3 = new int[]{
-            180, 160, 140, 200, 120, 160, 190
+            180, 160, 140, 200, 120, 190, 190
     };
 
     static int[] sum = new int[10];
 
     public static void main(String[] args) {
+
+        for (int i = 0; i < hoTen.length; i++) {
+            sum[i] = lan1[i] + lan2[i] + lan3[i];
+        }
 
         int choose;
 
@@ -75,7 +79,7 @@ public class QuanLyCuTa {
                     sortByNameAZ();
                     break;
                 case 8:
-                    equal();
+                    bangNhau();
                     break;
                 case 9:
                     hienThiLan3ThapNhat();
@@ -96,11 +100,6 @@ public class QuanLyCuTa {
     }
 
     private static void showAll() {
-
-        for (int i = 0; i < hoTen.length; i++) {
-            sum[i] = lan1[i] + lan2[i] + lan3[i];
-        }
-
         System.out.println("====================================== DANH SÁCH ==========================================================");
         System.out.println(String.format("%-5s | %-30s | %10s | %15s | %15s | %15s |", "STT", "HỌ TÊN VẬN ĐỘNG VIÊN", "Lần 1", "Lần 2", "Lần 3", "Tổng Thành Tích"));
         for (int i = 0; i < hoTen.length; i++) {
@@ -150,16 +149,18 @@ public class QuanLyCuTa {
                 }
             }
         }
-        int max = sumTmp[1];
         System.out.println("====================================== DANH SÁCH ==========================================================");
         System.out.println("-------------------------------- TỔNG THÀNH TÍCH CAO NHẤT -------------------------------------------------");
         System.out.println(String.format("%-5s | %-30s | %10s | %15s | %15s | %15s |", "STT", "HỌ TÊN VẬN ĐỘNG VIÊN", "Lần 1", "Lần 2", "Lần 3", "Tổng Thành Tích"));
-        for (int i = 0; i < top; i++) {
-            if (sumTmp[i] > max) {
-                max = sumTmp[i];
-                System.out.println("-----------------------------------------------------------------------------------------------------------");
-                System.out.println(String.format("%-5s | %-30s | %10d | %15s | %15s | %15s |", i + 1, hoTenTmp[i], lan1Tmp[i], lan2Tmp[i], lan3Tmp[i], sumTmp[i]));
-            }
+
+        int n = top;
+        if (top > hoTenTmp.length) {
+            n = hoTenTmp.length;
+        }
+
+        for (int i = 0; i <= n; i++) {
+            System.out.println("-----------------------------------------------------------------------------------------------------------");
+            System.out.println(String.format("%-5s | %-30s | %10d | %15s | %15s | %15s |", i + 1, hoTenTmp[i], lan1Tmp[i], lan2Tmp[i], lan3Tmp[i], sumTmp[i]));
         }
         System.out.println("-----------------------------------------------------------------------------------------------------------");
         System.out.print("Nhấn ENTER để tiếp tục ...");
@@ -206,7 +207,13 @@ public class QuanLyCuTa {
         System.out.println("====================================== DANH SÁCH ==========================================================");
         System.out.println("--------------------- TOP VẬN ĐÔNG VIÊN CÓ TỔNG THÀNH TÍCH CAO NHẤT ---------------------------------------");
         System.out.println(String.format("%-5s | %-30s | %10s | %15s | %15s | %15s |", "STT", "HỌ TÊN VẬN ĐỘNG VIÊN", "Lần 1", "Lần 2", "Lần 3", "Tổng Thành Tích"));
-        for (int i = 0; i < top; i++) {
+
+        int n = top;
+        if (top > hoTen.length) {
+            n = hoTen.length;
+        }
+
+        for (int i = 0; i < n; i++) {
             System.out.println("-----------------------------------------------------------------------------------------------------------");
             System.out.println(String.format("%-5s | %-30s | %10d | %15s | %15s | %15s |", i + 1, hoTenTmp[i], lan1Tmp[i], lan2Tmp[i], lan3Tmp[i], sumTmp[i]));
         }
@@ -318,7 +325,7 @@ public class QuanLyCuTa {
         sc.nextLine();
     }
 
-    private static void equal() {
+    private static void bangNhau() {
         for (int i = 0; i < hoTen.length - 1; i++) {
             for (int j = i + 1; j < hoTen.length; j++) {
                 if (sum[i] < sum[j]) {
@@ -390,16 +397,13 @@ public class QuanLyCuTa {
                 }
             }
         }
-        int min = lan3Tmp[1];
+
         System.out.println("====================================== DANH SÁCH ==========================================================");
         System.out.println("-------------------------------- CỬ TẠ LẦN 3 THẤP NHẤT ----------------------------------------------------");
         System.out.println(String.format("%-5s | %-30s | %10s | %15s | %15s | %15s |", "STT", "HỌ TÊN VẬN ĐỘNG VIÊN", "Lần 1", "Lần 2", "Lần 3", "Tổng Thành Tích"));
-        for (int i = 0; i < hoTenTmp.length; i++) {
-            if (lan3Tmp[i] < min) {
-                min = lan3Tmp[i];
-                System.out.println("-----------------------------------------------------------------------------------------------------------");
-                System.out.println(String.format("%-5s | %-30s | %10d | %15s | %15s | %15s |", i + 1, hoTenTmp[i], lan1Tmp[i], lan2Tmp[i], lan3Tmp[i], sumTmp[i]));
-            }
+        for (int i = 0; i < 1; i++) {
+            System.out.println("-----------------------------------------------------------------------------------------------------------");
+            System.out.println(String.format("%-5s | %-30s | %10d | %15s | %15s | %15s |", i + 1, hoTenTmp[i], lan1Tmp[i], lan2Tmp[i], lan3Tmp[i], sumTmp[i]));
         }
         System.out.println("-----------------------------------------------------------------------------------------------------------");
         System.out.print("Nhấn ENTER để tiếp tục ...");
@@ -439,16 +443,12 @@ public class QuanLyCuTa {
                 }
             }
         }
-        int max = lan1Tmp[1];
         System.out.println("====================================== DANH SÁCH ==========================================================");
         System.out.println("--------------------------------- CỬ TẠ LẦN 1 CAO NHẤT ----------------------------------------------------");
         System.out.println(String.format("%-5s | %-30s | %10s | %15s | %15s | %15s |", "STT", "HỌ TÊN VẬN ĐỘNG VIÊN", "Lần 1", "Lần 2", "Lần 3", "Tổng Thành Tích"));
-        for (int i = 0; i < hoTenTmp.length; i++) {
-            if (lan1Tmp[i] > max) {
-                max = lan1Tmp[i];
-                System.out.println("-----------------------------------------------------------------------------------------------------------");
-                System.out.println(String.format("%-5s | %-30s | %10d | %15s | %15s | %15s |", i + 1, hoTenTmp[i], lan1Tmp[i], lan2Tmp[i], lan3Tmp[i], sumTmp[i]));
-            }
+        for (int i = 0; i < 1; i++) {
+            System.out.println("-----------------------------------------------------------------------------------------------------------");
+            System.out.println(String.format("%-5s | %-30s | %10d | %15s | %15s | %15s |", i + 1, hoTenTmp[i], lan1Tmp[i], lan2Tmp[i], lan3Tmp[i], sumTmp[i]));
         }
         System.out.println("-----------------------------------------------------------------------------------------------------------");
         System.out.print("Nhấn ENTER để tiếp tục ...");

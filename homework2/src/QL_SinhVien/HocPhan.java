@@ -1,4 +1,4 @@
-package QL_BangDiemCaNhan;
+package QL_SinhVien;
 
 import java.util.Scanner;
 
@@ -31,7 +31,10 @@ class HocPhan {
     }
 
     public void showHocPhan() {
-
+        System.out.println("Mã học phần : " + maHocPhan);
+        System.out.println("Tên học phần : " + tenHocPhan);
+        System.out.println("Số tín chỉ : " + soTinChi);
+        System.out.println("Điểm học phần : " + diemHocPhan);
     }
 
     public String getMaHocPhan() {

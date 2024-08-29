@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ca0963c-2b4a-429e-9b49-b3893e3c0be5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Bai2/HangDienTu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Bai2/QuanLyHangDienTu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Bai2/SanPham.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/QL_Electronic/Electronic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/QL_Electronic/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/QL_Electronic/MayGiat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/QL_Electronic/TuLanh.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/QL_MayIn/DOTPRINTER.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/QL_MayIn/LASERPRINTER.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/QL_MayIn/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/QL_MayIn/PRINTER.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bai2/HangDienTu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QL_HangDienTu/HangDienTu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bai2/QuanLyHangDienTu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QL_HangDienTu/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bai2/SanPham.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QL_HangDienTu/SanPham.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +48,8 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
+    "Application.QL_Electronic.Main.executor": "Run",
+    "Application.QL_HangDienTu.Main.executor": "Run",
     "Application.QuanLyHangDienTu.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -53,13 +59,39 @@
     "onboarding.tips.debug.path": "D:/java/javaCore/homework4/src/Main.java"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="QuanLyHangDienTu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Bai2.QuanLyHangDienTu" />
+  <component name="RunManager" selected="Application.QL_HangDienTu.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="QL_MayIn.Main" />
       <module name="homework4" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Bai2.*" />
+          <option name="PATTERN" value="QL_MayIn.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QL_Electronic.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="QL_Electronic.Main" />
+      <module name="homework4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="QL_Electronic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QL_HangDienTu.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="QL_HangDienTu.Main" />
+      <module name="homework4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="QL_HangDienTu.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -69,7 +101,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.QuanLyHangDienTu" />
+        <item itemvalue="Application.QL_HangDienTu.Main" />
+        <item itemvalue="Application.QL_Electronic.Main" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>

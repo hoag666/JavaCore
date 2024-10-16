@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ca0963c-2b4a-429e-9b49-b3893e3c0be5" name="Changes" comment="" />
+    <list default="true" id="9ca0963c-2b4a-429e-9b49-b3893e3c0be5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../homework5/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework5/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework5/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework5/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework5/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework5/homework5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework5/src/Diem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework5/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework5/src/MonHoc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework5/src/SinhVien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
